@@ -1,0 +1,107 @@
+---
+title: "Exercise 2"
+author: "Elyka F. Surmaco"
+date: "2026-09-30"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+# TODO: Store 17 in a variable called a, and 5 in a variable called b
+```{r}
+a=17
+b=5
+
+a+b
+a-b
+a*b
+a/b
+```
+# TODO: Using the same a and b, compute and print a %% b and a %/% b
+```{r}
+a%%b
+a%/%b
+```
+# TODO: Print 2 raised to the power of 10 using the ^ operator
+```{r}
+print(2^10)
+
+```
+Question #1: Run 17 / 5, 17 %% 5, and 17 %/% 5 side by side. In your own words, explain how these three results relate to each other mathematically.
+
+```{r}
+17 / 5
+17%%5
+17%/%5
+```
+The first operator (/) gives you the exact, fractional result of the division., while the second operator (%%) gibes you the amount left over after dividing (the remainder)., and the last operator (%/%) gives the whole number of times 5 goes into 17 (the quotient).
+
+
+Question #2: Predict the output of 10 %% 3 and 10 %/% 3 before running the code. Were you correct? If not, explain what you misunderstood.
+
+My Prediction: 10%%3=1 and 10%/%3=3
+
+```{r}
+10 %% 3
+10 %/% 3
+```
+My predictions are correct.
+
+
+##Part B — Basic Data Types: typeof(), class(), and mode()
+# TODO: Use typeof() to check the type of each of x, y, z, w, v
+
+```{r}
+x <- 42
+y <- 42L        
+z <- "42"
+w <- TRUE
+v <- 3 + 2i
+typeof(x)
+typeof(y)
+typeof(z)
+typeof(w)
+typeof(v)
+```
+# TODO: Use class() to check the class of each of x, y, z, w, v
+```{r}
+```
+
+
+```{r}
+class(x)
+class(y)
+class(z)
+class(w)
+class(v)
+```
+# TODO: Use mode() to check the class of each of x, y, z, w, v
+
+```{r}
+mode(x)
+mode(y)
+mode(z)
+mode(w)
+mode(v)
+```
+Question #3): x <- 42 and y <- 42L look almost identical, but typeof(x) and typeof(y) give different answers. Explain the difference in your own words.
+
+Typeof(x) returns "double" (a floating-point numeric value), while typeof(y) returns "integer" (a whole number).
+
+
+Question #4: Is typeof() ever different from class() and from mode() for the same object? Look at your results above and explain any case where this happens (or, if you did not see one, explain what you would expect for a matrix or factor).
+
+Yes, they give different answers because they inspect the object differently. typeof() reveals what the data is on the inside (its raw memory storage). class() reveals what the object is on the outside (how R behaves with it).mode() is just an older, simplified version of typeof().
+
+
+##Part C — Type Conversion (20 min)
+# TODO: Convert num_string to a numeric value using as.numeric()
+# Then check its type with typeof(), class(), and mode()
+
+```{r}
+num_string <- "123"
+as.numeric(num_string)
+typeof(num_string)
+```
+
